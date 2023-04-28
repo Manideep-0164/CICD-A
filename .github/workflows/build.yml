@@ -18,11 +18,6 @@ jobs:
       - name : print node version
         run : node --version
 
-      - name : run-eslint
-        uses : actions/setup-node@v2
-        run : npm install
-        run : npm run test
-
   Run-eslint:
 
     runs-on : ubuntu-latest
