@@ -1,9 +1,13 @@
+name : PrintNodePerson
 on : push
-jobs: 
-    first-job:
-        runs-on: windows-latest
-        steps: 
-            - run : node --version
-            - uses : actions/checkout@v3
-            - run : node index.js
-            - run : npm run fix
+    jobs:
+        print-version:
+            runs-on: ubuntu-latest
+            steps: 
+                - name : install node verson
+                    uses : actions/setup-node@v2
+                    with : 
+                        node-version: "14.x"
+                - name : print node version
+                    run : node --version
+
