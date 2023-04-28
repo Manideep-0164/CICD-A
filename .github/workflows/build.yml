@@ -3,5 +3,6 @@ jobs:
     first-job:
         runs-on: windows-latest
         steps: 
-            - run : node --v
+            - run : node --version
+            - run : node index.js
             - run : npm run test
