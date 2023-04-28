@@ -36,7 +36,7 @@ jobs:
         run : npm install
         
       - name : run eslint
-        run : npx eslint .
+        run : npx eslint . --fix
 
   Testing-code:
     runs-on : ubuntu-latest
