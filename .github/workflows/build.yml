@@ -38,5 +38,24 @@ jobs:
       - name : run eslint
         run : npx eslint .
 
+  Testing-code:
+    runs-on : ubuntu-latest
+      steps:
+        - name : checkout codebase
+          uses : actions/checkout@v2
+
+        - name : set node enivronment
+          uses : actions/setup-node@v2
+          with: 
+            node-version : '14.x'
+
+        - name : installing dependencies
+          run : npm install
+
+        - name : executing the code
+          run : npm run test
+
+        - name : testing the code 
+          run : npx eslint .
 
 
