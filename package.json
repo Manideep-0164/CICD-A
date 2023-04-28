@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "fix": "npx eslint index.js --fix"
+    "test": "npx eslint index.js"
   },
   "keywords": [],
   "author": "",

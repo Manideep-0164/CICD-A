@@ -14,7 +14,37 @@ jobs:
         uses : actions/setup-node@v2
         with : 
           node-version: "14.x"
-          
+
       - name : print node version
         run : node --version
 
+      - name : run-eslint
+        uses : actions/setup-node@v2
+        run : npm install
+        run : npm run test
+
+
+
+name : Run esLinter
+
+on : push
+
+jobs:
+
+  run-eslint:
+
+    runs-on : ubuntu-latest
+    
+    steps:
+      - name : install-node.js
+        uses : actions/setup-node@v2
+        with :
+          node-version : '14.x'
+        run : node --version
+
+      - name : install dependencies
+        run : npm i
+
+      - name : run eslint
+        uses : actions/checkout@v2
+        run : npx eslint .
