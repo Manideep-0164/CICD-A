@@ -40,7 +40,7 @@ jobs:
 
   Testing-code:
     runs-on : ubuntu-latest
-      steps:
+    steps:
         - name : checkout codebase
           uses : actions/checkout@v2
 
