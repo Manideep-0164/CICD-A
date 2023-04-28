@@ -56,6 +56,6 @@ jobs:
           run : npm run test
 
         - name : testing the code 
-          run : npx eslint .
+          run : npx eslint . --fix
 
 
